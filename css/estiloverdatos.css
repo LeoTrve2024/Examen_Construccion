@@ -1,0 +1,100 @@
+/* Estilo general para el cuerpo */
+body {
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Menú a la izquierda y contenido a la derecha */
+    height: 100vh; /* Altura completa de la pantalla */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del menú lateral */
+.menu {
+    width: 220px; /* Ancho reducido para dar más espacio a la tabla */
+    background-color: #333; /* Fondo oscuro */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #444;
+}
+
+/* Estilo del contenido principal */
+.content {
+    flex: 1; /* Toma todo el espacio restante */
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9; /* Fondo claro */
+    box-sizing: border-box;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la tabla */
+.styled-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table thead tr {
+    background-color: #007bff; /* Azul intenso */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    font-weight: bold;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #eaf2fb; /* Azul claro */
+}
+
+.styled-table tbody tr:hover {
+    background-color: #d6e4f5; /* Hover azul más oscuro */
+    cursor: pointer;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #007bff;
+}
+
+/* Título centrado y estilizado */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007bff; /* Azul intenso */
+    text-transform: uppercase;
+}
