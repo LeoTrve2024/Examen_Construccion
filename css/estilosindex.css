@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/carrito.webp') no-repeat center center fixed; /* Ruta relativa corregida */
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que ocupe toda la altura de la ventana */
+    filter: brightness(0.8); /* Oscurece ligeramente el fondo */
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    border: 3px solid #ff4c4c; /* Borde con color de contraste */
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7), 0 0 15px #ff4c4c; /* Sombra más intensa */
+    position: relative; /* Para decoraciones adicionales */
+    overflow: hidden;
+}
+
+/* Decoraciones adicionales */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 76, 76, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px); /* Efecto de desenfoque */
+}
+
+.login-container::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 76, 76, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px); /* Efecto de desenfoque */
+}
+
+.login-header {
+    background: linear-gradient(135deg, #ff4c4c, #ff6a6a);
+    color: white;
+    padding: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px 5px 10px rgba(255, 76, 76, 0.7);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Texto con sombra */
+}
+
+.login-form {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente dentro del formulario */
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Organiza las etiquetas e inputs en columna */
+    align-items: flex-start; /* Alinea a la izquierda */
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 16px; /* Texto más grande */
+    color: #fff; /* Texto en blanco para contraste */
+    margin-bottom: 5px; /* Espacio entre etiqueta e input */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    border: 2px solid #ff4c4c;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease; /* Animación suave */
+    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    color: #fff; /* Texto blanco */
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #ff6a6a;
+    box-shadow: 0 0 10px rgba(255, 76, 76, 0.5);
+    background: rgba(255, 255, 255, 0.4);
+    color: #000; /* Texto negro al enfocar */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Botones en fila */
+    justify-content: space-between; /* Espacia los botones */
+    gap: 15px; /* Más espacio entre los botones */
+    margin-top: 20px;
+}
+
+.remember-button,
+.login-button {
+    flex: 1; /* Ajusta el tamaño en proporción */
+    padding: 10px;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    font-size: 16px; /* Texto más grande */
+    transition: all 0.3s ease; /* Animación suave en el hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.3); /* Sombra interna */
+}
+
+.remember-button {
+    background-color: #ff4c4c;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 76, 76, 0.7);
+}
+
+.remember-button:hover {
+    background-color: #ff6a6a;
+    box-shadow: 0 6px 12px rgba(255, 76, 76, 0.9);
+}
+
+.login-button {
+    background-color: #333;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.login-button:hover {
+    background-color: #555;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
