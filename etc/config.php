@@ -27,8 +27,7 @@ function get_controllers($arg1){
 //echo $_urlBase;
 //echo "<br>";
 //echo get_UrlBase('pagina.html');
-=======
-<<<<<<< HEAD
+
 <?php
 
 $_urlBase = "http://sistema.test/";
