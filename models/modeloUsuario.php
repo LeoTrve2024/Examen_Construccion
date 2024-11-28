@@ -1,5 +1,7 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] .'/models/connect/conexion.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
+//Todo lo relacionado a la base de datos, debe de estar en el modelo 
+//Un modelo por lo regular apunta a una tabla o una vista
 class modeloUsuario
 {
 
@@ -26,8 +28,59 @@ class modeloUsuario
         $stmt->bindParam(':perfil', $perfil);
         return $stmt->execute();
     }
-    
-    //debo hacer un metodo para hacer delete
 
-    //debo hacer un metodo para hacer update
+    // debe hacer un método para hacer delete
+    public function eliminarUsuarioPorNombre($username)
+    {
+        $query = "delete from usuarios where username = :username";
+        // statement o sentencia
+        $stm = $this->conexion->prepare($query);
+        $stm->bindParam(':username', $username);
+        // echo $stm;
+        return $stm->execute();
+    }
+    //----------
+    public function eliminarUsuarioPorId($idUsuario)
+    {
+        $sql = "DELETE FROM usuarios WHERE id = :id";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bindParam(':id', $idUsuario, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+
+    // debe hacer un método para hacer update
+    public function actualizarUsuario($id, $username, $password, $perfil)
+    {
+        $query = "update usuarios set username = :username, password = :password, perfil = :perfil where id = :id";
+        // statement o sentencia
+        $stm = $this->conexion->prepare($query);
+        $stm->bindParam(':id', $id);
+        $stm->bindParam(':username', $username);
+        $stm->bindParam(':password', $password);
+        $stm->bindParam(':perfil', $perfil);
+        // echo $stm;
+        return $stm->execute();
+    }
+
+    public function obtenerUsuarioPorNombre($username)
+    {
+        $query = "select id, username, password, perfil from usuarios where username = :username";
+        // statement o sentencia
+        $stm = $this->conexion->prepare($query);
+        $stm->bindParam(':username', $username);
+        // echo $stm;
+        $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_ASSOC);
+    }
+    // Obtener un usuario por su ID
+    public function obtenerUsuarioPorId($id)
+    {
+        $query = "SELECT id, username, password, perfil FROM usuarios WHERE id = :id";
+        $stmt = $this->conexion->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC); // Retorna una fila
+    }
+    
 }

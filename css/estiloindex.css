@@ -1,27 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('../img/carrito.webp') no-repeat center center fixed; /* Ruta relativa corregida */
-    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+    background: url('../img/carrito.webp') no-repeat center center fixed; 
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Hace que ocupe toda la altura de la ventana */
-    filter: brightness(0.8); /* Oscurece ligeramente el fondo */
+    height: 100vh; 
+    filter: brightness(0.8); 
 }
 
 .login-container {
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-    border: 3px solid #ff4c4c; /* Borde con color de contraste */
+    background: rgba(0, 0, 0, 0.7); 
+    border: 3px solid #ff4c4c; 
     padding: 20px;
     border-radius: 20px;
     width: 400px;
     text-align: center;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7), 0 0 15px #ff4c4c; /* Sombra más intensa */
-    position: relative; /* Para decoraciones adicionales */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7), 0 0 15px #ff4c4c; 
+    position: relative; 
     overflow: hidden;
 }
 
-/* Decoraciones adicionales */
 .login-container::before {
     content: '';
     position: absolute;
@@ -32,7 +31,7 @@ body {
     background: rgba(255, 76, 76, 0.3);
     border-radius: 50%;
     z-index: -1;
-    filter: blur(10px); /* Efecto de desenfoque */
+    filter: blur(10px); 
 }
 
 .login-container::after {
@@ -45,7 +44,7 @@ body {
     background: rgba(255, 76, 76, 0.3);
     border-radius: 50%;
     z-index: -1;
-    filter: blur(10px); /* Efecto de desenfoque */
+    filter: blur(10px); 
 }
 
 .login-header {
@@ -57,38 +56,38 @@ body {
     text-align: center;
     border-radius: 15px 15px 0 0;
     box-shadow: 0px 5px 10px rgba(255, 76, 76, 0.7);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Texto con sombra */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
 }
 
 .login-form {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente dentro del formulario */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
 
 .form-group {
     display: flex;
-    flex-direction: column; /* Organiza las etiquetas e inputs en columna */
-    align-items: flex-start; /* Alinea a la izquierda */
+    flex-direction: column; 
+    align-items: flex-start; 
     margin-bottom: 20px;
 }
 
 .login-form label {
-    font-size: 16px; /* Texto más grande */
-    color: #fff; /* Texto en blanco para contraste */
-    margin-bottom: 5px; /* Espacio entre etiqueta e input */
+    font-size: 16px; 
+    color: #fff; 
+    margin-bottom: 5px; 
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
+    width: 100%; 
     padding: 10px;
     border: 2px solid #ff4c4c;
     border-radius: 5px;
     font-size: 14px;
-    transition: all 0.3s ease; /* Animación suave */
-    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
-    color: #fff; /* Texto blanco */
+    transition: all 0.3s ease; 
+    background: rgba(255, 255, 255, 0.2); 
+    color: #fff; 
 }
 
 .login-form input[type="text"]:focus,
@@ -96,26 +95,26 @@ body {
     border-color: #ff6a6a;
     box-shadow: 0 0 10px rgba(255, 76, 76, 0.5);
     background: rgba(255, 255, 255, 0.4);
-    color: #000; /* Texto negro al enfocar */
+    color: #000; 
 }
 
 .button-container {
     display: flex;
-    flex-direction: row; /* Botones en fila */
-    justify-content: space-between; /* Espacia los botones */
-    gap: 15px; /* Más espacio entre los botones */
+    flex-direction: row; 
+    justify-content: space-between; 
+    gap: 15px; 
     margin-top: 20px;
 }
 
 .remember-button,
 .login-button {
-    flex: 1; /* Ajusta el tamaño en proporción */
+    flex: 1; 
     padding: 10px;
     border: none;
-    border-radius: 8px; /* Bordes más redondeados */
+    border-radius: 8px; 
     cursor: pointer;
-    font-size: 16px; /* Texto más grande */
-    transition: all 0.3s ease; /* Animación suave en el hover */
+    font-size: 16px; 
+    transition: all 0.3s ease; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.3); /* Sombra interna */
 }
 

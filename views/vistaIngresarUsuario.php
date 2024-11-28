@@ -21,13 +21,13 @@ function mostrarFormularioIngreso($mensaje = '')
 
             <form action="<?php echo get_urlBase('/controllers/controladorIngresarUsuario.php'); ?>" method="POST">
                 <label for="datusuario">Usuario</label>
-                <input type="text" name="datusuario" id="datusername" required>
+                <input type="text" name="datusuario" id="datusername" required autocomplete="off">
 
                 <label for="datpassword">Password</label>
-                <input type="password" name="datpassword" id="datpassword" required>
+                <input type="password" name="datpassword" id="datpassword" required autocomplete="off">
 
                 <label for="datperfil">Perfil</label>
-                <input type="text" name="datperfil" id="datperfil" required>
+                <input type="text" name="datperfil" id="datperfil" required autocomplete="off">
 
                 <button type="submit">Registrar Usuario</button>
             </form>
