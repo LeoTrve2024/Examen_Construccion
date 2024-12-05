@@ -1,5 +1,5 @@
 <?php
- require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,7 +25,12 @@
                 <button type="button" class="remember-button">Remember</button>
                 <button type="submit" class="login-button">Login</button>
             </div>
+            <!-- Espacio para mensajes de feedback -->
+            <div id="message-container" style="margin-top: 10px; color: red;"></div>
         </form>
     </div>
+    <!-- Agregar script del controlador JS -->
+    <script src="<?php echo get_urlBase('js/login.js'); ?>"></script>
 </body>
 </html>
+|

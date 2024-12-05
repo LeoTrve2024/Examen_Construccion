@@ -1,20 +1,31 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/models/modeloUsuario.php';
+
+// Redirige al dashboard si ya hay sesión iniciada.
+if (isset($_SESSION["txtusername"])) {
+    header('Location: ' . get_controllers('controladorDashboard.php'));
+    exit();
+}
+
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $v_username = $_POST["txtusername"] ?? '';
     $v_password = $_POST["txtpassword"] ?? '';
 
-    if ($v_username === "admin" && $v_password === "1234") {
+
+    $modeloUsuario = new modeloUsuario();
+    $credenciales = $modeloUsuario->ValidarUsuario($v_username, $v_password);
+    if ($credenciales) {
         $_SESSION["txtusername"] = $v_username;
         $_SESSION["txtpassword"] = $v_password;
 
-        // Redirección al dashboard
-        header('Location: ' . get_views('dashboard.php'));
+        header('Location: ' . get_controllers('controladorDashboard.php'));
         exit();
     } else {
         // Redirección a clave equivocada
@@ -22,3 +33,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
+
+//include get_views_disk('index.php');

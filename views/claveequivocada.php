@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
     <div class="container">
         <h1>CLAVE EQUIVOCADA</h1>
         <p>La contraseña que ingresaste es incorrecta.</p>
-        <a href="<?php echo get_urlBase('views/vistaIndex.php'); ?>" class="back-link">Volver al Login</a>
+        <a href="<?php echo get_urlBase('views/vistaLogin.php'); ?>" class="back-link">Volver al Login</a>
     </div>
 </body>
 </html>

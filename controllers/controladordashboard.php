@@ -1,13 +1,17 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/models/connect/conexion.php';
 if (!isset($_SESSION['txtusername'])) {
-    header('Location: ' . get_views('vistaIndex.php'));
+    header('Location: ' . get_views('vistaLogin.php'));
     exit();
 }
+
 $opcion = $_GET['opcion'] ?? 'Inicio';
+$contenido='';
 switch ($opcion) {
     case 'Inicio':
         $contenido = "<h1>Bienvenido al Sistema</h1>";
@@ -24,9 +28,14 @@ switch ($opcion) {
     case 'Eliminar':
         $contenido = "<iframe src='" . get_controllers('controladorEliminarUsuario.php') . "'></iframe>";
         break;
-    default:
-        $contenido = "<h1>Opción no válida</h1>";
-        break;
 }
 
-require_once $_SERVER['DOCUMENT_ROOT'].'/views/dashboard.php';
+
+//echo get_views('vistaDashboard.php');
+include get_views_disk('vistaDashboard.php');
+//include $_SERVER['DOCUMENT_ROOT'].'/views/vistaDashboard.php';
+/*echo "estas dentro del sistema";
+echo "<br>";
+echo get_views('vistaDashboard.php');
+*/
+?>
