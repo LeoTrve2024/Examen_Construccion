@@ -10,8 +10,8 @@ body {
 }
 
 .form-container {
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    height: 90%;
     background-color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -91,3 +91,41 @@ body {
     background-color: #f8f9fa; 
     color: #333; 
 }
+
+
+/* Grupo de entrada con lupa ************************************************* */
+.input-group {
+    display: flex !important; 
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.input-group input {
+    flex: 1; /* Permite que el campo de entrada ocupe el ancho disponible */
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.input-group .btn-lupa {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    width: 10%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    margin-top: -14px; /* Solapa el borde del input */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.input-group .btn-lupa:hover {
+    background-color: #45a049;
+}
+
+.input-group .btn-lupa i {
+    pointer-events: none; /* Permite que el botón entero sea clickeable */
+}
+
+

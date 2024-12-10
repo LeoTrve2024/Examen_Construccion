@@ -30,7 +30,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/etc/config.php';
         </form>
     </div>
     <!-- Agregar script del controlador JS -->
-    <script src="<?php echo get_urlBase('js/login.js'); ?>"></script>
+    <script src="<?php echo get_urlBase('js/controladorlogin.js'); ?>"></script>
 </body>
 </html>
 |

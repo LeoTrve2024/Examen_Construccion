@@ -11,7 +11,7 @@ if (!isset($_SESSION['txtusername'])) {
 }
 
 $opcion = $_GET['opcion'] ?? 'Inicio';
-$contenido='';
+$contenido = '';
 switch ($opcion) {
     case 'Inicio':
         $contenido = "<h1>Bienvenido al Sistema</h1>";
@@ -28,14 +28,26 @@ switch ($opcion) {
     case 'Eliminar':
         $contenido = "<iframe src='" . get_controllers('controladorEliminarUsuario.php') . "'></iframe>";
         break;
+
+    // Casos para ventas
+    case 'IngresarVentas':
+        $contenido = "<iframe src='" . get_controllers('controladorIngresarVenta.php') . "'></iframe>";
+        break;
+    case 'VerVentas':
+        $contenido = "<iframe src='" . get_controllers('controladorVerVentas.php') . "'></iframe>";
+        break;
+    case 'ModificarVentas':
+        $contenido = "<iframe src='" . get_controllers('controladorModificarVenta.php') . "'></iframe>";
+        break;
+    case 'EliminarVentas':
+        $contenido = "<iframe src='" . get_controllers('controladorEliminarVenta.php') . "'></iframe>";
+        break;
+
+    default:
+        $contenido = "<h1>Opción no válida</h1>";
+        break;
 }
 
-
-//echo get_views('vistaDashboard.php');
+// Incluir la vista del dashboard
 include get_views_disk('vistaDashboard.php');
-//include $_SERVER['DOCUMENT_ROOT'].'/views/vistaDashboard.php';
-/*echo "estas dentro del sistema";
-echo "<br>";
-echo get_views('vistaDashboard.php');
-*/
 ?>

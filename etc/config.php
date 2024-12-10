@@ -4,11 +4,10 @@ define('URL_BASE', "http://sistema.test/");
 define('DB_HOST','localhost');
 define('DB_NAME','dbsistema');
 define('DB_USER','root');
-define('DB_PASS','') ; 
-
+define('DB_PASS','') ;
 
 function get_path($type,$arg1){
-    $basePaths = ['base'=> URL_BASE, 
+    $basePaths = ['base'=> URL_BASE,
     'views'=>URL_BASE.'views/',
     'models'=>URL_BASE.'models/',
     'css'=>URL_BASE.'css/',
@@ -45,3 +44,4 @@ function get_controllers_disk($arg1){
 //echo URL_BASE;
 //echo "<br>";
 //echo get_UrlBase('pagina.html');
+
