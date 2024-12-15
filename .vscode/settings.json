@@ -57,6 +57,18 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
-    "ostream": "cpp"
+    "*.sw.json": "json",
+    "*.sw.yaml": "yaml",
+    "*.sw.yml": "yaml",
+    "*.dash.json": "json",
+    "*.dash.yaml": "yaml",
+    "*.dash.yml": "yaml",
+    "ostream": "cpp",
+    "*.tcc": "cpp",
+    "string": "cpp",
+    "istream": "cpp",
+    "fstream": "cpp",
+    "text_encoding": "cpp",
+    "iosfwd": "cpp"
   }
 }

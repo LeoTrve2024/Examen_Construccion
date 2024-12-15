@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/laragon/www/sistema/generator",
-      "program": "c:/laragon/www/sistema/generator/build/Debug/outDebug",
+      "cwd": "c:/laragon/www/sistema/generador",
+      "program": "c:/laragon/www/sistema/generador/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

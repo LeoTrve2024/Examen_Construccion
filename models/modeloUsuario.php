@@ -14,9 +14,7 @@ class modeloUsuario
     //debe hacer un metodo para hacer select
     public function obtenerUsuarios()
     {
-        $query = $this->conexion->query('SELECT '.
-        'id,'.
-         'username, password, perfil FROM usuarios');
+        $query = $this->conexion->query('SELECT id, username, password, perfil FROM usuarios');
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
     //debe hacer un metodo para hacer insert
